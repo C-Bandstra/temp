@@ -6,17 +6,27 @@
         DASHBOARD
         <img class="icon dashboard" src="../assets/dashboard.svg">
       </button>
-      <button class="btn">
+      <button>
         TOOL LIBRARY
         <img class="icon tool-library" src="../assets/tool-library.svg">
       </button>
-      <button class="btn">
+      <button>
         MESSAGING
         <img class="icon messaging" src="../assets/messaging.svg">
       </button>
-      <button class="btn">
+      <button>
         PATIENTS
         <img class="icon patients" src="../assets/patients.svg">
+      </button>
+    </section>
+    <section class="btn-container-2">
+      <button>
+        HELP CENTER
+        <img class="icon help-center" src="../assets/help-center.svg">
+      </button>
+      <button>
+        SETTINGS
+        <img class="icon settings" src="../assets/settings.svg">
       </button>
     </section>
   </div>
@@ -39,13 +49,12 @@ export default {
   width: 18%;
   height: 100%;
   background-color: #FFFFFF;
-  /* width: 960px; */
   position: relative;
   margin:0 auto;
-  /* line-height: 1.4em; */
 }
 
-.btn-container {
+.btn-container,
+.btn-container-2 {
   width: 100%;
   height: 50%;
   display: flex;
@@ -54,27 +63,33 @@ export default {
   padding: 2%
 }
 
-.btn {
-  width: 82%;
+.btn-container-2 {
+  margin-top: 35%;
+}
+
+button {
+  width: 80%;
   height: 13%;
   display: flex;
   align-items: center;
   border: none;
   margin-bottom: 5%;
   border-radius: 30px;
-  color: #000000;
-  font-family: 'Montserrat', sans-serif;
   background: rgba(196, 196, 196, 0.25);
   padding: 6%;
   position: relative;
   margin: 3%;
   font-weight: 500;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
 
   /* background: linear-gradient(92.91deg, #86A1BD 6.41%, #B9B8C3 52.63%, #FAC391 94.27%); */
 }
 
 .logo {
-  margin: 10%;
+  margin: 8%;
+  width: 30%;
 }
 
 .icon {
@@ -85,15 +100,14 @@ export default {
   margin-right: 4%;
 }
 
-#container2 {
+/* #container2 {
 
 }
 
-/* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */    
+If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960)
+
 @media only screen and (max-width: 479px){
     #container2 { width: 90%; }
-}
-
-
+} */
 
 </style>
