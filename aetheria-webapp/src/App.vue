@@ -1,5 +1,5 @@
 <template>
-  <NavBar msg="Welcome to Your Vue.js App"/>
+  <NavBar/>
 </template>
 
 <script>
