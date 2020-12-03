@@ -83,8 +83,6 @@ button {
   color: #000000;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
-
-  /* background: linear-gradient(92.91deg, #86A1BD 6.41%, #B9B8C3 52.63%, #FAC391 94.27%); */
 }
 
 .logo {
@@ -99,15 +97,5 @@ button {
 .messaging {
   margin-right: 4%;
 }
-
-/* #container2 {
-
-}
-
-If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960)
-
-@media only screen and (max-width: 479px){
-    #container2 { width: 90%; }
-} */
 
 </style>
