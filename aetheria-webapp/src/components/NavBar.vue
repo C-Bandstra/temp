@@ -91,6 +91,7 @@ button {
 
 .logo {
   margin: 8%;
+  margin-bottom: 0%;
   width: 30%;
 }
 
