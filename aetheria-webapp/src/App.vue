@@ -1,14 +1,18 @@
 <template>
   <NavBar/>
+  <Patients/>
 </template>
 
 <script>
+
 import NavBar from './components/NavBar.vue'
+import Patients from './components/Patients.vue'
 
 export default {
   name: 'App',
   components: {
-    NavBar
+    NavBar,
+    Patients
   }
 }
 </script>
@@ -22,5 +26,7 @@ export default {
   width: 100%;
   height: 100%;
   background-color: #F6F6F6;
+  display: flex;
+  justify-content: flex-start;
 }
 </style>
