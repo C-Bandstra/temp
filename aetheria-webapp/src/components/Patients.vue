@@ -20,25 +20,25 @@
           <button class="quickview-btn">
             INTAKE
           </button>
-          <p>11 / 15 / 2001</p>   
+          <p class="patient-stat">11 / 15 / 2001</p>   
         </div>
         <div class="patient-slot coping-quickview">
           <button class="quickview-btn">
             COPING
           </button>
-          <p>4 / 10</p>     
+          <p class="patient-stat">4 / 10</p>     
         </div>
         <div class="patient-slot severity-quickview">
           <button class="quickview-btn">
             SEVERITY
           </button>
-          <p>9 / 10</p>     
+          <p class="patient-stat">9 / 10</p>     
         </div>
         <div class="patient-slot health-quickview">
           <button class="quickview-btn">
             HEALTH
           </button>
-          <p>6.67 / 10</p>               
+          <p class="patient-stat">6.67 / 10</p>               
         </div>
       </section>
     </section>
@@ -151,7 +151,10 @@ export default {
 
   .patient-name {
     border-left: none;
+  }
 
+  .patient-stat {
+    font-weight: 300;
   }
 
   .quickview-btn {
