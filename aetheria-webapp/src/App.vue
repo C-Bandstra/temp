@@ -1,6 +1,8 @@
 <template>
-  <NavBar/>
-  <Patients/>
+  <div>
+    <NavBar/>
+    <Patients/>
+  </div>
 </template>
 
 <script>
