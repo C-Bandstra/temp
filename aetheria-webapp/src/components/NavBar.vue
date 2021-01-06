@@ -92,7 +92,7 @@ button {
 .logo {
   margin: 8%;
   margin-bottom: 0%;
-  width: 30%;
+  width: 40%;
 }
 
 .icon {
