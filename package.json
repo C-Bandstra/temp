@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "axios": "^0.21.1",
+    "vuex": "^4.0.0-rc.2"
+  }
+}
