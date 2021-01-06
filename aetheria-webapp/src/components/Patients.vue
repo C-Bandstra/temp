@@ -12,35 +12,39 @@
     </header>
     <p class="filter-status">Filtered by {{ filterType }}</p>
     <section class="patients-container">
-      <section class="patient-card">
+
+
+      <section v-for="patient in patients.patients.patients" :key="patient" class="patient-card">
         <div class="patient-slot patient-name">
-          <p>Amanda K. Southworth</p>   
+          <p>{{ patient.patient_name }}</p>   
         </div>
         <div class="patient-slot intake-quickview">
           <button class="quickview-btn">
             INTAKE
           </button>
-          <p class="patient-stat">11 / 15 / 2001</p>   
+          <p class="patient-stat">{{ patient.intake_date}}</p>   
         </div>
         <div class="patient-slot coping-quickview">
           <button class="quickview-btn">
             COPING
           </button>
-          <p class="patient-stat">4 / 10</p>     
+          <p class="patient-stat">{{ patient.coping_stat}} / 10</p>     
         </div>
         <div class="patient-slot severity-quickview">
           <button class="quickview-btn">
             SEVERITY
           </button>
-          <p class="patient-stat">9 / 10</p>     
+          <p class="patient-stat">{{ patient.severity_stat}} / 10</p>     
         </div>
         <div class="patient-slot health-quickview">
           <button class="quickview-btn">
             HEALTH
           </button>
-          <p class="patient-stat">6.67 / 10</p>               
+          <p class="patient-stat">{{ patient.median_health_stat}} / 10</p>               
         </div>
       </section>
+
+
     </section>
     <button class="new-patient-btn">
       ADD NEW PATIENT
@@ -50,6 +54,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'Patients',
   data() {
@@ -57,6 +62,17 @@ export default {
       filterType: 'A-Z'
     };
   },
+  computed: {
+    gettersPatients() {
+      return this.$store.getters.allPatients
+    },
+    patients() {
+      return this.$store.state.patients
+    }
+  },
+  mounted() {
+    this.$store.dispatch('fetchPatientsStats')
+  }
 }
 </script>
 
