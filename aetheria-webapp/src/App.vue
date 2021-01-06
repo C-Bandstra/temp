@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-container">
     <NavBar/>
     <Patients/>
   </div>
@@ -30,5 +30,9 @@ export default {
   background-color: #F6F6F6;
   display: flex;
   justify-content: flex-start;
+}
+
+.app-container {
+  display: contents;
 }
 </style>
