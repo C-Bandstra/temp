@@ -4,59 +4,34 @@
       <h1>PATIENTS</h1>
       <section class="search-bar">
         <input/>
-        <img class="search-icon" src="../assets/search.svg"/>
+        <img class="search-icon" src="../../assets/search.svg"/>
       </section>
       <button class="filter-btn">
-        <img src="../assets/filter.svg"/>
+        <img src="../../assets/filter.svg"/>
       </button>
     </header>
     <p class="filter-status">Filtered by {{ filterType }}</p>
     <section class="patients-container">
 
-
-      <section v-for="patient in patients.patients.patients" :key="patient" class="patient-card">
-        <div class="patient-slot patient-name">
-          <p>{{ patient.patient_name }}</p>   
-        </div>
-        <div class="patient-slot intake-quickview">
-          <button class="quickview-btn">
-            INTAKE
-          </button>
-          <p class="patient-stat">{{ patient.intake_date}}</p>   
-        </div>
-        <div class="patient-slot coping-quickview">
-          <button class="quickview-btn">
-            COPING
-          </button>
-          <p class="patient-stat">{{ patient.coping_stat}} / 10</p>     
-        </div>
-        <div class="patient-slot severity-quickview">
-          <button class="quickview-btn">
-            SEVERITY
-          </button>
-          <p class="patient-stat">{{ patient.severity_stat}} / 10</p>     
-        </div>
-        <div class="patient-slot health-quickview">
-          <button class="quickview-btn">
-            HEALTH
-          </button>
-          <p class="patient-stat">{{ patient.median_health_stat}} / 10</p>               
-        </div>
-      </section>
-
+      <PatientCard v-for="patient in patients.patients" :key="patient.patient_id" :patient="patient"/>
 
     </section>
     <button class="new-patient-btn">
       ADD NEW PATIENT
-      <img class="right-arrow" src="../assets/right-arrow.svg">
+      <img class="right-arrow" src="../../assets/right-arrow.svg">
     </button>
   </div>
 </template>
 
 <script>
 
+import PatientCard from './PatientCard'
+
 export default {
   name: 'Patients',
+  components: {
+    PatientCard
+  },
   data() {
     return {
       filterType: 'A-Z'
@@ -64,7 +39,7 @@ export default {
   },
   computed: {
     gettersPatients() {
-      return this.$store.getters.allPatients
+      return this.$store.getters.allPatientsIDs
     },
     patients() {
       return this.$store.state.patients
@@ -155,33 +130,6 @@ export default {
     border: 1px solid lightgrey;
     border-radius: 5px;
     background-color: white;
-  }
-
-  .patient-slot {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 20%;
-    border-left: 1px solid lightgrey;
-  }
-
-  .patient-name {
-    border-left: none;
-  }
-
-  .patient-stat {
-    font-weight: 300;
-  }
-
-  .quickview-btn {
-    width: 33%;
-    height: 45%;
-    color: white;
-    border-radius: 19px;
-    border: none;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #545454;
-    font-size: 10px;
   }
 
   .new-patient-btn {

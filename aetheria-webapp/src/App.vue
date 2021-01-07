@@ -8,7 +8,7 @@
 <script>
 
 import NavBar from './components/NavBar.vue'
-import Patients from './components/Patients.vue'
+import Patients from './components/patients/Patients.vue'
 
 export default {
   name: 'App',
