@@ -1,11 +1,11 @@
 import { createStore } from 'vuex'
 import patients from './modules/patients'
-// import Auth from './modules/Auth'
+import auth from './modules/auth'
 
 const store = createStore({
   modules: {
-    patients
-    // auth: Auth,
+    patients,
+    auth,
   }
 })
 

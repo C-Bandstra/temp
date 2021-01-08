@@ -1,29 +1,29 @@
 <template>
-    <section class="patient-card">
+  <section class="patient-card">
 
-        <div class="patient-slot patient-name">
-            <p>{{ patient.patient_name }}</p>   
-        </div>
+    <div class="patient-slot patient-name">
+        <p>{{ patient.patient_name }}</p>   
+    </div>
 
-        <PatientSlot title="INTAKE" :stat="patient.intake_date"/>
-        <PatientSlot title="COPING" :stat="`${patient.coping_stat} / 10`"/>
-        <PatientSlot title="SEVERITY" :stat="`${patient.severity_stat} / 10`"/>
-        <PatientSlot title="HEALTH" :stat="`${patient.median_health_stat} / 10`"/>
-        
-    </section>
+    <PatientSlot title="INTAKE" :stat="patient.intake_date"/>
+    <PatientSlot title="COPING" :stat="`${patient.coping_stat} / 10`"/>
+    <PatientSlot title="SEVERITY" :stat="`${patient.severity_stat} / 10`"/>
+    <PatientSlot title="HEALTH" :stat="`${patient.median_health_stat} / 10`"/>
+    
+  </section>
 </template>
 
 <script>
 import PatientSlot from './PatientSlot'
 
 export default {
-    name: 'PatientCard',
-    components: {
-      PatientSlot
-    },
-    props: {
-        patient: Object
-    }
+  name: 'PatientCard',
+  components: {
+    PatientSlot
+  },
+  props: {
+      patient: Object
+  }
 }
 </script>
 

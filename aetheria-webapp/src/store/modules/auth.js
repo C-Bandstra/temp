@@ -1,14 +1,10 @@
-import axios from 'axios'
-import Vuex from 'vuex'
-import Vue from 'vue'
-
-Vue.use(Vuex);
-
-export default Auth = {
+// import axios from 'axios'
+const Auth = {
 
     state: () => {
         return {
-            
+            email: '1',
+            password: '1'
         }
     },
     mutations: {
@@ -21,3 +17,5 @@ export default Auth = {
   
     }
 }
+
+export default Auth;

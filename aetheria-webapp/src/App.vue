@@ -1,24 +1,30 @@
 <template>
-  <div class="app-container">
-    <NavBar/>
-    <Patients/>
+  <div class="component-container">
+    <router-view />
   </div>
 </template>
 
-<script>
-import NavBar from './components/NavBar.vue'
-import Patients from './components/patients/Patients.vue'
 
+
+<script>
+
+
+
+// import NavBar from './components/NavBar.vue'
+// import Patients from './views/Patients.vue'
+// import Login from './components/login/Login'
+// <NavBar/>
+// <Patients/>
 export default {
   name: 'App',
   components: {
-    NavBar,
-    Patients
+    // Patients,
+    // NavBar
   }
 }
 </script>
 
-<style scoped>
+<style>
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -31,7 +37,21 @@ export default {
   justify-content: flex-start;
 }
 
-.app-container {
-  display: contents;
+.component-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
+
+#blockColorblindContent {
+  display: none;
+}
+
+#colorBlindSVG {
+  display: none;
+}
+
+
+
+
 </style>

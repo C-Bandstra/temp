@@ -4,10 +4,10 @@
       <h1>PATIENTS</h1>
       <section class="search-bar">
         <input/>
-        <img class="search-icon" src="../../assets/search.svg"/>
+        <img class="search-icon" src="../assets/search.svg"/>
       </section>
       <button class="filter-btn">
-        <img src="../../assets/filter.svg"/>
+        <img src="../assets/filter.svg"/>
       </button>
     </header>
     <p class="filter-status">Filtered by {{ filterType }}</p>
@@ -18,14 +18,14 @@
     </section>
     <button class="new-patient-btn">
       ADD NEW PATIENT
-      <img class="right-arrow" src="../../assets/right-arrow.svg">
+      <img class="right-arrow" src="../assets/right-arrow.svg">
     </button>
   </div>
 </template>
 
 <script>
 
-import PatientCard from './PatientCard'
+import PatientCard from '../components/patients/PatientCard'
 
 export default {
   name: 'Patients',
@@ -69,6 +69,8 @@ export default {
     justify-self: flex-start;
     margin-top: 1%;
     align-items: center;
+    height: 5.5%;
+    width: 100%;
   }
   
   h1 {
