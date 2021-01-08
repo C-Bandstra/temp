@@ -1,5 +1,6 @@
 <template>
     <section class="patient-card">
+
         <div class="patient-slot patient-name">
             <p>{{ patient.patient_name }}</p>   
         </div>
@@ -13,7 +14,6 @@
 </template>
 
 <script>
-
 import PatientSlot from './PatientSlot'
 
 export default {
@@ -25,10 +25,9 @@ export default {
         patient: Object
     }
 }
-
 </script>
 
-<style>
+<style scoped>
   .patient-card {
     width: 100%;
     height: 13%;
