@@ -6,9 +6,8 @@
 </template>
 
 <script>
-
 import NavBar from './components/NavBar.vue'
-import Patients from './components/Patients.vue'
+import Patients from './components/patients/Patients.vue'
 
 export default {
   name: 'App',
@@ -19,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

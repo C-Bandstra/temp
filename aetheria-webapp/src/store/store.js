@@ -10,5 +10,6 @@ const store = createStore({
 })
 
 store.state.patients
+store.getters.allPatientsIDs
 
 export default store;
