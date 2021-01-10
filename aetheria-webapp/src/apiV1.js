@@ -1,7 +1,7 @@
-import axios from 'axios'
+import axios from "axios"
 
 const connection = axios.create({
-  baseURL: 'https://aetheria-backend-temp.herokuapp.com/api/v1/'
+  baseURL: "https://aetheria-backend-temp.herokuapp.com/api/v1/"
 })
 
 export default {

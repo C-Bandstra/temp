@@ -10,13 +10,13 @@
 
 
 
-// import NavBar from './components/NavBar.vue'
-// import Patients from './views/Patients.vue'
-// import Login from './components/login/Login'
+// import NavBar from "./components/NavBar.vue"
+// import Patients from "./views/Patients.vue"
+// import Login from "./components/login/Login"
 // <NavBar/>
 // <Patients/>
 export default {
-  name: 'App',
+  name: "App",
   components: {
     // Patients,
     // NavBar

@@ -1,5 +1,5 @@
 <template>
-  <div id='navbar' class="navbar">
+  <div id="navbar" class="navbar">
     <img class="logo" src="../assets/aetheria-logo.svg">
     <p> {{ }} </p>
     <section class="btn-container">
@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: 'NavBar',
+  name: "NavBar",
   data() {
     return {
       active: undefined
@@ -80,7 +80,7 @@ button {
   margin: 2%;
   font-weight: 500;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   outline: none;
 }

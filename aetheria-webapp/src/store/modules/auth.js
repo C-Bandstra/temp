@@ -1,10 +1,10 @@
-// import axios from 'axios'
+// import axios from "axios"
 const Auth = {
 
     state: () => {
         return {
-            email: '1',
-            password: '1'
+            email: "1",
+            password: "1"
         }
     },
     mutations: {

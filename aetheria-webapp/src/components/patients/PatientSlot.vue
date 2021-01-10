@@ -40,7 +40,7 @@ export default {
     color: white;
     border-radius: 19px;
     border: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: #545454;
     font-size: 10px;
   }

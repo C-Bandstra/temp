@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import PatientSlot from './PatientSlot'
+import PatientSlot from "./PatientSlot"
 
 export default {
-  name: 'PatientCard',
+  name: "PatientCard",
   components: {
     PatientSlot
   },
@@ -60,7 +60,7 @@ export default {
     color: white;
     border-radius: 19px;
     border: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: #545454;
     font-size: 10px;
   }

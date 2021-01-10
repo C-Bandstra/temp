@@ -17,14 +17,15 @@
 <script>
 
 export default {
-  name: 'Login',
+  name: "Login",
   data() {
     return {
       input: {
-        email: 
+        email: "",
+        password: "",
       }
     }
-  }
+  },
   components: {
 
   },

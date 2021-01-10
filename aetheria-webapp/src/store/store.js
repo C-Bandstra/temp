@@ -1,6 +1,6 @@
-import { createStore } from 'vuex'
-import patients from './modules/patients'
-import auth from './modules/auth'
+import { createStore } from "vuex"
+import patients from "./modules/patients"
+import auth from "./modules/auth"
 
 const store = createStore({
   modules: {

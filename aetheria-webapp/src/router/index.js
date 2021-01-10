@@ -1,6 +1,7 @@
 // import Vue from "vue"
 import { createWebHistory, createRouter} from "vue-router"
-import Login from '../views/Login.vue'
+// import Login from "../views/Login.vue"
+import Patients from "../views/Patients.vue"
 
 // Vue.use(VueRouter)
 
@@ -12,7 +13,7 @@ const router = createRouter({
     {
       path: "/",
       name: "Login",
-      component: Login
+      component: Patients
     }
   ]
 })
