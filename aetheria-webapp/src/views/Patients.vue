@@ -13,7 +13,7 @@
     <p class="filter-status">Filtered by {{ filterType }}</p>
     <section class="patients-container">
 
-      <PatientCard v-for="patient in patients.patients" :key="patient.patient_id" :patient="patient"/>
+      <PatientCard v-for="patient in patients" :key="patient.patient_id" :patient="patient"/>
 
     </section>
     <button class="new-patient-btn">
@@ -23,9 +23,10 @@
   </div>
 </template>
 
-<script>
 
+<script>
 import PatientCard from '../components/patients/PatientCard'
+// import { mapGetters } from 'vuex'
 
 export default {
   name: 'Patients',
@@ -34,25 +35,37 @@ export default {
   },
   data() {
     return {
-      filterType: 'A-Z'
+			patients: null,
+			filterType: 'A-Z'
     };
   },
-  computed: {
-    gettersPatients() {
-      return this.$store.getters.allPatientsIDs
-    },
-    patients() {
-      return this.$store.state.patients
-    }
-  },
-  mounted() {
-    this.$store.dispatch('fetchPatientsStats')
-  }
+	// computed: mapGetters(['getAllPatientsStats']),
+	
+	created(){
+		this.unsubscribe = this.$store.subscribe(
+			(mutation) => {
+				if (mutation.type === 'setPatientsStats'){
+					this.patients = mutation.payload
+				}
+			}
+		)
+	},
+	// created(){
+	// 	this.unwatch = this.$store.watch(
+	// 		(state, getters) => getters.getAllPatientsStats,
+	// 		(newValue) => {
+	// 			this.patients = newValue
+	// 		}
+	// 	)
+	// },
+	beforeUnmount(){
+		// this.unwatch()
+		this.unsubscribe()
+	}
 }
+
+
 </script>
-
-
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   #patients {

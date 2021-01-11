@@ -4,27 +4,23 @@ const Patients = {
 
     state: () => {
         return {
-            patients: []
+            patientsStats: []
         }
     },
     mutations: {
-        SET_PATIENTS(state, patients) {
-          state.patients = patients
-          console.log(state, "in mutation")
+        setPatientsStats: (state, patientsStats) => {
+            state.patientsStats = patientsStats
         }
     },
     actions: {
-        fetchPatientsStats({ commit }) {
-            api.getPatientsStats(2)
-                .then(response => {
-                    commit('SET_PATIENTS', response.data)
-                })
+        async fetchPatientsStats({ commit }) {
+            const response = await api.getPatientsStats(2);
+            let patients = response.data.patients
+            commit('setPatientsStats', patients)
         }
     },
     getters: {
-        allPatientsIDs: (state) => state.patients.map(patient => {
-            return patient.id
-        })
+        getAllPatientsStats: state => state.patientsStats
     }
 }
 

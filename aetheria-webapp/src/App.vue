@@ -20,7 +20,10 @@ export default {
   components: {
     // Patients,
     // NavBar
-  }
+  },
+  created() {
+    this.$store.dispatch('fetchPatientsStats')
+  },
 }
 </script>
 
